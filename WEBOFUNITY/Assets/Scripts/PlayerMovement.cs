@@ -66,7 +66,11 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MyInput();
-        Look();
+        /*
+         * Now instead of look we are using a third-person camera:
+         * https://www.youtube.com/watch?v=4HpC--2iowE
+        */
+        //Look();
     }
 
     /// <summary>
@@ -149,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
         // Movement while sliding
         if (grounded && crouching) multiplierV = 0f;
 
+        transform.rotation = new Quaternion(0, playerCam.rotation.y, 0, playerCam.rotation.w);
+
         //Apply forces to move player
         rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
         rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
@@ -181,7 +187,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private float desiredX;
-    private void Look()
+    /*
+     * Now instead of look we are using a third-person camera:
+     * https://www.youtube.com/watch?v=4HpC--2iowE
+    */
+    /*private void Look()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime * sensMultiplier;
@@ -197,7 +207,7 @@ public class PlayerMovement : MonoBehaviour
         //Perform the rotations
         playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
         orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
-    }
+    }*/
 
     private void CounterMovement(float x, float y, Vector2 mag)
     {

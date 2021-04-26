@@ -10,6 +10,8 @@ public class GrapplingGun : MonoBehaviour
     private float maxDistance = 100f;
     private SpringJoint joint;
 
+    private Vector3 gunPositionAdjuster = new Vector3(0, 100, 0);
+
     void Awake()
     {
         lr = GetComponent<LineRenderer>();
@@ -17,6 +19,11 @@ public class GrapplingGun : MonoBehaviour
 
     void Update()
     {
+        //We want the aim cursor to be at the center of the screen
+        transform.position = camera.position + gunPositionAdjuster;
+        //We want the grappling coming from the spider's butt
+        gunTip.position = player.position;
+
         if (Input.GetMouseButtonDown(0))
         {
             StartGrapple();
