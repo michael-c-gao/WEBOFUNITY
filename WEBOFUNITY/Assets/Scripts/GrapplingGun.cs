@@ -7,7 +7,7 @@ public class GrapplingGun : MonoBehaviour
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable;
     public Transform gunTip, camera, player;
-    private float maxDistance = 100f;
+    private float maxDistance = 150f;
     private SpringJoint joint;
 
     private Vector3 gunPositionAdjuster = new Vector3(0, 100, 0);
@@ -57,12 +57,12 @@ public class GrapplingGun : MonoBehaviour
 
             //The distance grapple will try to keep from grapple point. 
             joint.maxDistance = distanceFromPoint * 0.8f;
-            joint.minDistance = distanceFromPoint * 0.25f;
+            joint.minDistance = distanceFromPoint * 0.5f;
 
             //Adjust these values to fit your game.
-            joint.spring = 4.5f;
+            joint.spring = 2f;
             joint.damper = 7f;
-            joint.massScale = 4.5f;
+            joint.massScale = 3.5f;
 
             lr.positionCount = 2;
             currentGrapplePosition = gunTip.position;
