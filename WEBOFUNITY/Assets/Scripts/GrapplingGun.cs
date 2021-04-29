@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GrapplingGun : MonoBehaviour
 {
-
+    //followed tutorial https://www.youtube.com/watch?v=Xgh4v1w5DxU
     private LineRenderer lr;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable;
