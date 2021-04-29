@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //to implement first person script I followed https://www.youtube.com/watch?v=XAC8U9-dTZU
     //Assingables
     public Transform playerCam;
     public Transform orientation;
