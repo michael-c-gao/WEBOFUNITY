@@ -17,10 +17,12 @@ public class PlayerMovement : MonoBehaviour
     private float sensMultiplier = 1f;
 
     //Movement
-    public float moveSpeed = 450;
-    public float maxSpeed = 10;
+    public float maxSpeed = 20;
     public bool grounded;
     public LayerMask whatIsGround;
+    private float moveSpeed;
+    private float speedScalarStartingSpeed;
+    private float speedScalar;
 
     public float counterMovement = 0.175f;
     private float threshold = 0.01f;
@@ -55,16 +57,20 @@ public class PlayerMovement : MonoBehaviour
         playerScale = transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        moveSpeed = GetComponent<PlayerStats>().StartingSpeed;
+        speedScalarStartingSpeed = GetComponent<PlayerStats>().StartingSpeed;
     }
 
 
     private void FixedUpdate()
     {
+        speedScalar = GetComponent<PlayerStats>().getSpeed() / speedScalarStartingSpeed;
         Movement();
     }
 
     private void Update()
     {
+
         MyInput();
         /*
          * Now instead of look we are using a third-person camera:
@@ -156,8 +162,8 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = new Quaternion(0, playerCam.rotation.y, 0, playerCam.rotation.w);
 
         //Apply forces to move player
-        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
-        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+        rb.AddForce(orientation.transform.forward * y * moveSpeed * speedScalar * Time.deltaTime * multiplier * multiplierV);
+        rb.AddForce(orientation.transform.right * x * moveSpeed * speedScalar * Time.deltaTime * multiplier);
     }
 
     private void Jump()
@@ -216,18 +222,18 @@ public class PlayerMovement : MonoBehaviour
         //Slow down sliding
         if (crouching)
         {
-    rb.AddForce(moveSpeed * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
+    rb.AddForce(moveSpeed * speedScalar * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
     return;
 }
 
 //Counter movement
 if (Math.Abs(mag.x) > threshold && Math.Abs(x) < 0.05f || (mag.x < -threshold && x > 0) || (mag.x > threshold && x < 0))
 {
-    rb.AddForce(moveSpeed * orientation.transform.right * Time.deltaTime * -mag.x * counterMovement);
+    rb.AddForce(moveSpeed * speedScalar * orientation.transform.right * Time.deltaTime * -mag.x * counterMovement);
 }
 if (Math.Abs(mag.y) > threshold && Math.Abs(y) < 0.05f || (mag.y < -threshold && y > 0) || (mag.y > threshold && y < 0))
 {
-    rb.AddForce(moveSpeed * orientation.transform.forward * Time.deltaTime * -mag.y * counterMovement);
+    rb.AddForce(moveSpeed * speedScalar * orientation.transform.forward * Time.deltaTime * -mag.y * counterMovement);
 }
 
 //Limit diagonal running. This will also cause a full stop if sliding fast and un-crouching, so not optimal.
