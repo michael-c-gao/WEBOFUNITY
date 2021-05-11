@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrapplingGun : MonoBehaviour
 {
@@ -9,12 +10,16 @@ public class GrapplingGun : MonoBehaviour
     public Transform gunTip, camera, player;
     private float maxDistance = 150f;
     private SpringJoint joint;
+    private GameObject crosshair;
+
+    public float pullTowardsSpeed = 10.0f; //How fast we can move up and down on the web
 
     private Vector3 gunPositionAdjuster = new Vector3(0, 100, 0);
 
     void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        crosshair = GameObject.Find("CrossHair");
     }
 
     void Update()
@@ -24,6 +29,19 @@ public class GrapplingGun : MonoBehaviour
         //We want the grappling coming from the spider's butt
         gunTip.position = player.position;
 
+        //Check if there's anything we can hit. If so, draw cross hair as green
+        RaycastHit hit;
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable))
+        {
+            crosshair.GetComponent<RawImage>().color = Color.green;
+        }
+        //Else, draw crosshair as black
+        else
+        {
+            crosshair.GetComponent<RawImage>().color = Color.black;
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
             StartGrapple();
@@ -31,6 +49,24 @@ public class GrapplingGun : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             StopGrapple();
+        }
+
+        //Check if player is reeling up or down on the web
+        if (Input.GetKey(KeyCode.Q))
+        {
+            if (lr.positionCount > 0)
+            {
+                Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
+                player.transform.position -= direction * Time.deltaTime * pullTowardsSpeed;
+            }
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            if (lr.positionCount > 0)
+            {
+                Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
+                player.transform.position += direction * Time.deltaTime *  pullTowardsSpeed;
+            }
         }
     }
 
@@ -65,7 +101,6 @@ public class GrapplingGun : MonoBehaviour
             joint.massScale = 3.5f;
 
             lr.positionCount = 2;
-            currentGrapplePosition = gunTip.position;
         }
     }
 
