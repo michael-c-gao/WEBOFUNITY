@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
 
     public float lookRadius = 10f;
-    public Transform Player;
+    public GameObject Player;
 
     Transform target;
     NavMeshAgent agent;
@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     // Source of reference: https://youtu.be/xppompv1DBg
     void Start()
     {
-        target = Player;
+        target = Player.transform;
         print(target.position);
         agent = GetComponent<NavMeshAgent>();
     }
@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = Player.transform;
         float distance = Vector3.Distance(target.position, transform.position);
 
         if(distance <= lookRadius)

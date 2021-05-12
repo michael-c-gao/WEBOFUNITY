@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - StatIncreaser
+  - Enemy
   layers:
   - Default
   - TransparentFX
