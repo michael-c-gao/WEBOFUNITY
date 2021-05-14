@@ -5,19 +5,21 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private bool isAttacking;
+    public GameObject player;
     public GameObject spider;
+
+    private PlayerStats statsScript;
 
     // Start is called before the first frame update
     void Start()
     {
         isAttacking = false;
+        statsScript = player.GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
-    {        
-        //transform.position = spider.transform.position + new Vector3(0f, 0.2f, 0.6f);
-        //transform.rotation = spider.transform.rotation;
+    {
 
         if (Input.GetKeyDown("f"))
         {
@@ -33,10 +35,10 @@ public class PlayerAttack : MonoBehaviour
     {
         if (isAttacking)
         {
-            if (other.transform.CompareTag("Enemy"))
+            if (other.transform.CompareTag("Ant"))
             {
-                other.transform.position += new Vector3(0, 0, 5);
-                print("Working here on trigger");
+                Object.Destroy(other.gameObject, 0.25f);
+                statsScript.setDamage(statsScript.getDamage() + 1);
             }
         }
     }
