@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -302,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441572, guid: b65520aa45c99fd4faf4303897663b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.887
+      value: 1.761
       objectReference: {fileID: 0}
     - target: {fileID: 441572, guid: b65520aa45c99fd4faf4303897663b79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2250,7 +2250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441572, guid: b65520aa45c99fd4faf4303897663b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.777
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 441572, guid: b65520aa45c99fd4faf4303897663b79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2959,6 +2959,10 @@ PrefabInstance:
     - target: {fileID: 1796107938102580, guid: 1fd36c41e050e1e4ebc62caea2b8e9a1, type: 3}
       propertyPath: m_Name
       value: Wooden_Garage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499276420694682, guid: 1fd36c41e050e1e4ebc62caea2b8e9a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4499276420694682, guid: 1fd36c41e050e1e4ebc62caea2b8e9a1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3685,7 +3689,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796285827}
-  m_LocalRotation: {x: 0.114395574, y: -0.0000000042720965, z: 4.919383e-10, w: 0.9934353}
+  m_LocalRotation: {x: 0.114395574, y: 0.000000004273355, z: -4.920832e-10, w: 0.9934353}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3778,7 +3782,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820265672}
-  m_LocalRotation: {x: 0.09630656, y: -0.0000000042815995, z: 4.1427176e-10, w: 0.99535173}
+  m_LocalRotation: {x: 0.09630656, y: 0.0000000042815995, z: -4.1427176e-10, w: 0.99535173}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6885,7 +6889,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573726940}
-  m_LocalRotation: {x: 0.078233585, y: -0.000000017681577, z: 0.0000000013875459, w: 0.99693507}
+  m_LocalRotation: {x: 0.078233585, y: -0.000000017681566, z: 0.000000001387545, w: 0.99693507}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9668,11 +9672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2965096734371638048, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000016887205
+      value: -0.000000016887205
       objectReference: {fileID: 0}
     - target: {fileID: 2965096734371638048, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000000329877
+      value: 0.00000000329877
       objectReference: {fileID: 0}
     - target: {fileID: 2965096734371638055, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: field of view
@@ -9828,11 +9832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2965096735520107035, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000085632
+      value: 0.0000000085632
       objectReference: {fileID: 0}
     - target: {fileID: 2965096735520107035, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 8.285438e-10
+      value: -8.285438e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2965096735545418689, guid: 9a077c9df8bbba54d98af0aedb54d21a, type: 3}
       propertyPath: m_Name
