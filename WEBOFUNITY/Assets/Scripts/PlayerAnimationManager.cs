@@ -15,11 +15,11 @@ public class PlayerAnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("f"))
+        if (Input.GetMouseButtonDown(1))
         {
             characterAnimator.SetBool("isAttacking", true);
         }
-        else if (Input.GetKeyUp("f"))
+        else if (Input.GetMouseButtonUp(1))
         {
             characterAnimator.SetBool("isAttacking", false);
         }

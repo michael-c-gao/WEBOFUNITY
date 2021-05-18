@@ -21,11 +21,11 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("f"))
+        if (Input.GetMouseButtonDown(1))
         {
             isAttacking = true;
         }
-        else if (Input.GetKeyUp("f"))
+        else if (Input.GetMouseButtonUp(1))
         {
             isAttacking = false;
         }

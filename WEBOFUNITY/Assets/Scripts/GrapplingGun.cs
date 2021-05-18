@@ -60,14 +60,6 @@ public class GrapplingGun : MonoBehaviour
                 player.transform.position -= direction * Time.deltaTime * pullTowardsSpeed;
             }
         }
-        else if (Input.GetKey(KeyCode.E))
-        {
-            if (lr.positionCount > 0)
-            {
-                Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
-                player.transform.position += direction * Time.deltaTime *  pullTowardsSpeed;
-            }
-        }
     }
 
     //Called after Update

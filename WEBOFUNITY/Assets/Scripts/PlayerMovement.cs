@@ -65,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         speedScalar = GetComponent<PlayerStats>().getSpeed() / speedScalarStartingSpeed;
-        Movement();
+        if(!Input.GetKey(KeyCode.Q))
+            Movement();
     }
 
     private void Update()
