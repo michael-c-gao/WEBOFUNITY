@@ -17,7 +17,6 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         target = Player.transform;
-        print(target.position);
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -27,8 +26,12 @@ public class EnemyController : MonoBehaviour
         target = Player.transform;
         float distance = Vector3.Distance(target.position, transform.position);
 
+        print(lookRadius);
+        print(distance);
+
         if(distance <= lookRadius)
         {
+            print("Chasing");
             agent.SetDestination(target.position);
             
             if(distance <= agent.stoppingDistance)
