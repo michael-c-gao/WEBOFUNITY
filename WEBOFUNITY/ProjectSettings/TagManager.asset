@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StatIncreaser
   - Ant
+  - Beetle
   layers:
   - Default
   - TransparentFX

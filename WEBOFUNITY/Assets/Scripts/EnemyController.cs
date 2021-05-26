@@ -6,6 +6,12 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
 
+    public bool isDead = false;
+    int deathCounter = 0;
+
+    public bool inAttackRange = false;
+
+    public bool isChasing = false;
     public float lookRadius = 10f;
     public GameObject Player;
 
@@ -26,22 +32,34 @@ public class EnemyController : MonoBehaviour
         target = Player.transform;
         float distance = Vector3.Distance(target.position, transform.position);
 
-        print(lookRadius);
-        print(distance);
+        isChasing = chaseStatus(distance);
+        print(isChasing);
 
-        if(distance <= lookRadius)
+        if(isChasing)
         {
-            print("Chasing");
             agent.SetDestination(target.position);
             
             if(distance <= agent.stoppingDistance)
             {
                 //Face player
                 FaceTarget();
-                //Attack player
+                inAttackRange = true;
+
+            }
+            else
+            {
+                inAttackRange = false;
             }
         }
 
+    }
+
+
+
+
+    bool chaseStatus(float distance)
+    {
+        return (distance <= lookRadius);
     }
 
     void FaceTarget()

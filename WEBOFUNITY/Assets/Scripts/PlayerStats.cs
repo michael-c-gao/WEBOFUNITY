@@ -10,15 +10,15 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI LifestealText;
     public TextMeshProUGUI SpeedText;
 
-    public float StartingHealth = 100;
-    public float StartingDamage = 10;
-    public float StartingLifesteal = 0;
-    public float StartingSpeed = 10;
+    public float StartingHealth = 69f;
+    public float StartingDamage = 10f;
+    public float StartingLifesteal = 0f;
+    public float StartingSpeed = 10f;
 
-    private float health;
-    private float damage;
-    private float lifesteal;
-    private float speed;
+    public float health;
+    public float damage;
+    public float lifesteal;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
