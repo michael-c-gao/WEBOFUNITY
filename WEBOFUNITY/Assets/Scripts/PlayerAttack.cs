@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 Object.Destroy(other.gameObject, 0.25f);                //want this to occur after death animatin
 
-                statsScript.setDamage(statsScript.getDamage() + 1);
+                // statsScript.setDamage(statsScript.getDamage() + 1);
             }
         }
     }
