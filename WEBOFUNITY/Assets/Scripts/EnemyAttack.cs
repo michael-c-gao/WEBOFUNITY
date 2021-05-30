@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public AudioClip beetleAttackSound;
+    private AudioSource beetleAttackAudioSource;
+    
     public int attackCD = 0;
     public bool inRange = false;
 
@@ -17,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
     {
 
         currentAttack = this.GetComponentInParent<EnemyStats>().attack;
-
+        beetleAttackAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +53,11 @@ public class EnemyAttack : MonoBehaviour
                 Player.GetComponent<PlayerStats>().setHealth(currentAttack);
                 print(currentPlayerHealth);
                 attackCD = -100;
+                if (!beetleAttackAudioSource.isPlaying)
+                {
+                    beetleAttackAudioSource.clip = beetleAttackSound;
+                    beetleAttackAudioSource.Play();
+                }
             }
         }
     }

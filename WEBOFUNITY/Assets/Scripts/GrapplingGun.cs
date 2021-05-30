@@ -5,6 +5,7 @@ public class GrapplingGun : MonoBehaviour
 {
     private AudioSource spiderWebSlingingAudioSource;
     public AudioClip spiderWebSlingSound;
+    public AudioClip spiderWebReelSound;
     
     //followed tutorial https://www.youtube.com/watch?v=Xgh4v1w5DxU
     private LineRenderer lr;
@@ -62,6 +63,13 @@ public class GrapplingGun : MonoBehaviour
             {
                 Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
                 player.transform.position -= direction * Time.deltaTime * pullTowardsSpeed;
+                if(spiderWebSlingingAudioSource.clip == spiderWebSlingSound)
+                    spiderWebSlingingAudioSource.Stop();
+                if (!spiderWebSlingingAudioSource.isPlaying)
+                {
+                    spiderWebSlingingAudioSource.clip = spiderWebReelSound;
+                    spiderWebSlingingAudioSource.Play();
+                }
             }
         }
     }

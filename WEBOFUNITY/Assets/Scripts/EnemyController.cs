@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    public AudioClip beetleWalkingSound;
+    private AudioSource beetleWalkingAudioSource;
 
     public bool isDead = false;
     int deathCounter = 0;
@@ -24,6 +26,7 @@ public class EnemyController : MonoBehaviour
     {
         target = Player.transform;
         agent = GetComponent<NavMeshAgent>();
+        beetleWalkingAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +51,11 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
+                if (!beetleWalkingAudioSource.isPlaying)
+                {
+                    beetleWalkingAudioSource.clip = beetleWalkingSound;
+                    beetleWalkingAudioSource.Play();
+                }
                 inAttackRange = false;
             }
         }
