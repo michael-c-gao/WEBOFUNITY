@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Lift Car\Script\Moveliftcar.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\AnimationManager.cs" />
+     <Compile Include="Assets\Scripts\menu.cs" />
      <Compile Include="Assets\Scripts\BeetleAnimationManager.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Scripts\BeetleController.cs" />
