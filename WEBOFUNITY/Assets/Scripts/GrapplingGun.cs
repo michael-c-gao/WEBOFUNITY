@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class GrapplingGun : MonoBehaviour
 {
+    private AudioSource spiderWebSlingingAudioSource;
+    public AudioClip spiderWebSlingSound;
+    
     //followed tutorial https://www.youtube.com/watch?v=Xgh4v1w5DxU
     private LineRenderer lr;
     private Vector3 grapplePoint;
@@ -20,6 +23,7 @@ public class GrapplingGun : MonoBehaviour
     {
         lr = GetComponent<LineRenderer>();
         crosshair = GameObject.Find("CrossHair");
+        spiderWebSlingingAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -93,6 +97,12 @@ public class GrapplingGun : MonoBehaviour
             joint.massScale = 3.5f;
 
             lr.positionCount = 2;
+            
+            if (!spiderWebSlingingAudioSource.isPlaying)
+            {
+                spiderWebSlingingAudioSource.clip = spiderWebSlingSound;
+                spiderWebSlingingAudioSource.Play();
+            }
         }
     }
 

@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
 
         isChasing = chaseStatus(distance);
-        print(isChasing);
+        //print(isChasing);
 
         if(isChasing)
         {

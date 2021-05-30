@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+
     private bool isAttacking;
     public GameObject player;
     public GameObject spider;
@@ -41,9 +42,11 @@ public class PlayerAttack : MonoBehaviour
             if (other.transform.CompareTag("Beetle"))
             {
                 Object.Destroy(other.gameObject, 0.25f);                //want this to occur after death animatin
-
+                
                 // statsScript.setDamage(statsScript.getDamage() + 1);
             }
+
+            isAttacking = false;
         }
     }
     //private bool isAttacking;

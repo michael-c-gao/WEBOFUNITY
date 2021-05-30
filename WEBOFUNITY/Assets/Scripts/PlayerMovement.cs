@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
 
     //Other
     private Rigidbody rb;
+    
+    //Audio
+    private AudioSource spiderAudio;
+    public AudioClip spiderWalkSound;
 
     //Rotation and look
     private float xRotation;
@@ -59,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         moveSpeed = GetComponent<PlayerStats>().StartingSpeed;
         speedScalarStartingSpeed = GetComponent<PlayerStats>().StartingSpeed;
+        spiderAudio = GetComponent<AudioSource>();
     }
 
 
@@ -73,6 +78,20 @@ public class PlayerMovement : MonoBehaviour
     {
 
         MyInput();
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)
+        {
+            if (!spiderAudio.isPlaying)
+            {
+                print("Clip should be playing");
+                spiderAudio.clip = spiderWalkSound;
+                spiderAudio.Play();
+            }
+        }
+        else
+        {
+            spiderAudio.Stop();
+        }
+
         /*
          * Now instead of look we are using a third-person camera:
          * https://www.youtube.com/watch?v=4HpC--2iowE

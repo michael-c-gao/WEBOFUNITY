@@ -25,7 +25,7 @@ public class EnemyAttack : MonoBehaviour
     {
 
         inRange = this.transform.parent.GetComponentInParent<EnemyController>().inAttackRange;
-        print(inRange);
+        //print(inRange);
 
     }
 
