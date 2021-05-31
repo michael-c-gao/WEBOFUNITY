@@ -76,27 +76,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
-        MyInput();
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)
+        if (!PauseMenu.isPaused)
         {
-            if (!spiderAudio.isPlaying)
+            MyInput();
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)
             {
-                print("Clip should be playing");
-                spiderAudio.clip = spiderWalkSound;
-                spiderAudio.Play();
+                if (!spiderAudio.isPlaying)
+                {
+                    print("Clip should be playing");
+                    spiderAudio.clip = spiderWalkSound;
+                    spiderAudio.Play();
+                }
             }
-        }
-        else
-        {
-            spiderAudio.Stop();
-        }
+            else
+            {
+                spiderAudio.Stop();
+            }
 
-        /*
-         * Now instead of look we are using a third-person camera:
-         * https://www.youtube.com/watch?v=4HpC--2iowE
-        */
-        //Look();
+            
+        }
     }
 
     /// <summary>

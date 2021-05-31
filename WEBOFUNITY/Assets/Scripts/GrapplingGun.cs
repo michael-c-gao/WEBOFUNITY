@@ -29,46 +29,49 @@ public class GrapplingGun : MonoBehaviour
 
     void Update()
     {
-        //We want the aim cursor to be at the center of the screen
-        transform.position = camera.position + gunPositionAdjuster;
-        //We want the grappling coming from the spider's butt
-        gunTip.position = player.position;
+        if (!PauseMenu.isPaused)
+        {
+            //We want the aim cursor to be at the center of the screen
+            transform.position = camera.position + gunPositionAdjuster;
+            //We want the grappling coming from the spider's butt
+            gunTip.position = player.position;
 
-        //Check if there's anything we can hit. If so, draw cross hair as green
-        RaycastHit hit;
-        if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable))
-        {
-            crosshair.GetComponent<RawImage>().color = Color.green;
-        }
-        //Else, draw crosshair as black
-        else
-        {
-            crosshair.GetComponent<RawImage>().color = Color.black;
-        }
-
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartGrapple();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StopGrapple();
-        }
-
-        //Check if player is reeling up or down on the web
-        if (Input.GetKey(KeyCode.Q))
-        {
-            if (lr.positionCount > 0)
+            //Check if there's anything we can hit. If so, draw cross hair as green
+            RaycastHit hit;
+            if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleable))
             {
-                Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
-                player.transform.position -= direction * Time.deltaTime * pullTowardsSpeed;
-                if(spiderWebSlingingAudioSource.clip == spiderWebSlingSound)
-                    spiderWebSlingingAudioSource.Stop();
-                if (!spiderWebSlingingAudioSource.isPlaying)
+                crosshair.GetComponent<RawImage>().color = Color.green;
+            }
+            //Else, draw crosshair as black
+            else
+            {
+                crosshair.GetComponent<RawImage>().color = Color.black;
+            }
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartGrapple();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                StopGrapple();
+            }
+
+            //Check if player is reeling up or down on the web
+            if (Input.GetKey(KeyCode.Q))
+            {
+                if (lr.positionCount > 0)
                 {
-                    spiderWebSlingingAudioSource.clip = spiderWebReelSound;
-                    spiderWebSlingingAudioSource.Play();
+                    Vector3 direction = (player.transform.position - joint.connectedAnchor).normalized;
+                    player.transform.position -= direction * Time.deltaTime * pullTowardsSpeed;
+                    if (spiderWebSlingingAudioSource.clip == spiderWebSlingSound)
+                        spiderWebSlingingAudioSource.Stop();
+                    if (!spiderWebSlingingAudioSource.isPlaying)
+                    {
+                        spiderWebSlingingAudioSource.clip = spiderWebReelSound;
+                        spiderWebSlingingAudioSource.Play();
+                    }
                 }
             }
         }
