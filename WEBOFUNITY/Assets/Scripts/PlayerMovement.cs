@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerScale = transform.localScale;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         moveSpeed = GetComponent<PlayerStats>().StartingSpeed;
         speedScalarStartingSpeed = GetComponent<PlayerStats>().StartingSpeed;

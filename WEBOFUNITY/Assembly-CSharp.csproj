@@ -57,11 +57,13 @@
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Scripts\MovementTools.cs" />
      <Compile Include="Assets\Scripts\TeleportPoint.cs" />
      <Compile Include="Assets\PBR_Fences\Scripts\CameraFreeflight.cs" />
+     <Compile Include="Assets\WavingGrass\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimationManager.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\ColorSetter.cs" />
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\TargetSetter.cs" />
      <Compile Include="Assets\Scripts\GrapplingGun.cs" />
+     <Compile Include="Assets\WavingGrass\Scripts\GrassController.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\StatIncreaserScript.cs" />
      <Compile Include="Assets\RDL\Security_Pack\Scripts\scr_camera.cs" />
@@ -90,11 +92,13 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\WavingGrass\Shader\GrassWind.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Nicrom\PolyPacks\Wind\Assets\Shaders\ASE\LPW_Vegetation.shader" />
+     <None Include="Assets\WavingGrass\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
