@@ -69,9 +69,11 @@
      <Compile Include="Assets\RDL\Security_Pack\Scripts\scr_camera.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Lift Car\Script\Moveliftcar.cs" />
+     <Compile Include="Assets\Scripts\GrassPainterEditor.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\AnimationManager.cs" />
      <Compile Include="Assets\Scripts\menu.cs" />
      <Compile Include="Assets\Scripts\BeetleAnimationManager.cs" />
+     <Compile Include="Assets\Scripts\GeometryGrassPainter.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Scripts\BeetleController.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\SmoothFollow.cs" />
@@ -80,6 +82,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Bed &amp; Bath Furniture Pack\Documentation.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\CS - Signs Free\Standard 2 Sided.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\Interior Asset\README.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -101,6 +104,8 @@
      <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
      <None Include="Assets\WavingGrass\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\CS - Signs Free\Readme.txt" />
+     <None Include="Assets\Shader\GrassGeometry.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
