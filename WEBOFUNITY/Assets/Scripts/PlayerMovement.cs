@@ -59,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerScale = transform.localScale;
-        //Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = false;
         moveSpeed = GetComponent<PlayerStats>().StartingSpeed;
         speedScalarStartingSpeed = GetComponent<PlayerStats>().StartingSpeed;
         spiderAudio = GetComponent<AudioSource>();
@@ -69,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        
+            Cursor.lockState =  CursorLockMode.Confined;
+            Cursor.visible = false;
+
         speedScalar = GetComponent<PlayerStats>().getSpeed() / speedScalarStartingSpeed;
         if(!Input.GetKey(KeyCode.Q))
             Movement();

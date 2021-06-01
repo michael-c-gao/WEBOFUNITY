@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\GeometryGrassPainter.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Scripts\BeetleController.cs" />
+     <Compile Include="Assets\ShaderInteractor.cs" />
      <Compile Include="Assets\ImportedAssets\Monster Beetle\Examples\Scripts\SmoothFollow.cs" />
      <None Include="Assets\SpaceZeta_Spotlight\Info.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
