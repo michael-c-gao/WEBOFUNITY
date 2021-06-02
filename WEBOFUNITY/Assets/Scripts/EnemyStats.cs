@@ -8,7 +8,7 @@ public class EnemyStats : MonoBehaviour
     public GameObject Player;
 
     public float BaseValue;
-    public float StartingHealth = 30;
+    public float StartingHealth = 50;
     public float StartingAttack = 20;
     public float StartingSpeed = 3;       // speed doesnt do anything so far
 

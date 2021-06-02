@@ -9,6 +9,8 @@ public class EnemyAttack : MonoBehaviour
     
     public int attackCD = 0;
     public bool inRange = false;
+    //public float attackDelay;
+    //public bool initiateAttack = false;
 
     public GameObject Player;
     float currentPlayerHealth = 0f;
@@ -28,7 +30,6 @@ public class EnemyAttack : MonoBehaviour
     {
 
         inRange = this.transform.parent.GetComponentInParent<EnemyController>().inAttackRange;
-        //print(inRange);
 
     }
 
@@ -40,6 +41,38 @@ public class EnemyAttack : MonoBehaviour
             attackCD += 1;
         }
 
+        //code below must trigger after onTriggerStay       move this to update potentially so theres no delay
+
+        //if(initiateAttack = true{
+        //      //freeze movement of the beetle
+        //      attackWindup();
+        //      initiateAttack = false;
+        //      }
+        
+    }
+
+    void attackWindup()
+    {
+        //attackDelay = Time.time;        //set time delay; might need to place this in fixedupdate tied to ontriggerstay somehow
+        //begin attack animation
+        //if (current Time.time == attackDelay + durationOfAnimation) {     //(at end of animation) 
+        //      attackPlayer()
+        //      }
+
+    }
+
+    void attackPlayer()
+    {
+        currentPlayerHealth = Player.GetComponent<PlayerStats>().getHealth();
+        print(currentPlayerHealth);
+        Player.GetComponent<PlayerStats>().setHealth(currentAttack);
+        print(currentPlayerHealth);
+        attackCD = -100;
+        if (!beetleAttackAudioSource.isPlaying)
+        {
+            beetleAttackAudioSource.clip = beetleAttackSound;
+            beetleAttackAudioSource.Play();
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -48,17 +81,18 @@ public class EnemyAttack : MonoBehaviour
         {
             if (other.transform.CompareTag("Player"))
             {
-                currentPlayerHealth = Player.GetComponent<PlayerStats>().getHealth();
-                print(currentPlayerHealth);
-                Player.GetComponent<PlayerStats>().setHealth(currentAttack);
-                print(currentPlayerHealth);
-                attackCD = -100;
-                if (!beetleAttackAudioSource.isPlaying)
-                {
-                    beetleAttackAudioSource.clip = beetleAttackSound;
-                    beetleAttackAudioSource.Play();
-                }
+                attackPlayer();                                 //comment this out after attack delat is complete
+                //initiateAttack = true;
             }
         }
     }
 }
+
+
+//for time delay in attack: https://answers.unity.com/questions/1500346/i-am-trying-to-make-my-enemy-ai-have-an-attack-del.html
+//its not the same but essentially we want the delay to occur
+//prior to the attack not inbetween
+
+//processof thot
+//ontriggerstay ->trigger animation +timer ->damage calculation afteer animation ends(timer ends) and IF PLAYER IS STILL IN ATTACKSPHERE
+//not sure how to do the last one, occurs in ontriggerstay so obtain a bool from there to check if player is still in range
