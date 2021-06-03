@@ -64,7 +64,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
   isDead: 0
   inAttackRange: 0
   isChasing: 0
-  lookRadius: 10
+  lookRadius: 15
   Player: {fileID: 0}
 --- !u!82 &1813807618290583406
 AudioSource:
@@ -345,7 +345,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beetleAttackSound: {fileID: 8300000, guid: 4f7b4a8c762964449831768667c6ca38, type: 3}
   attackCD: 0
+  attackDelay: 0
+  animationEnd: 0
+  animationDuration: 1.65
   inRange: 0
+  inAttackRange: 0
+  initiateAttack: 0
+  stopMove: 0
   Player: {fileID: 0}
 --- !u!82 &5516831264794139682
 AudioSource:

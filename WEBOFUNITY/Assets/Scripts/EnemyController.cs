@@ -47,6 +47,7 @@ public class EnemyController : MonoBehaviour
                 //Face player
                 FaceTarget();
                 inAttackRange = true;
+                agent.isStopped = true;                                     //want the navmeshagent to stop until the animation and attack in manager and enemyattack are complete
 
             }
             else
@@ -57,6 +58,7 @@ public class EnemyController : MonoBehaviour
                     beetleWalkingAudioSource.Play();
                 }
                 inAttackRange = false;
+                agent.isStopped = false;
             }
         }
 

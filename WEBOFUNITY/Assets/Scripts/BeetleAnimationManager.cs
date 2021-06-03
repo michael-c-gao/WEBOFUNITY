@@ -23,7 +23,7 @@ public class BeetleAnimationManager : MonoBehaviour
     void Update()
     {
         walkTrigger = this.GetComponentInParent<EnemyController>().isChasing;
-        attackTrigger = this.GetComponentInChildren<EnemyAttack>().inRange;
+        attackTrigger = this.GetComponentInChildren<EnemyAttack>().initiateAttack;
         attackTimer = this.GetComponentInChildren<EnemyAttack>().attackCD;
 
         if (walkTrigger)

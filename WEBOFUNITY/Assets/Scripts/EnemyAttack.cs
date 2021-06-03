@@ -8,9 +8,16 @@ public class EnemyAttack : MonoBehaviour
     private AudioSource beetleAttackAudioSource;
     
     public int attackCD = 0;
+    
+    public float attackDelay;
+    public float animationEnd;
+    public float animationDuration;
+    
     public bool inRange = false;
-    //public float attackDelay;
-    //public bool initiateAttack = false;
+    public bool inAttackRange = false;
+    public bool initiateAttack = false;
+    public bool stopMove = false;
+    bool repeatAttack = false;
 
     public GameObject Player;
     float currentPlayerHealth = 0f;
@@ -23,6 +30,7 @@ public class EnemyAttack : MonoBehaviour
 
         currentAttack = this.GetComponentInParent<EnemyStats>().attack;
         beetleAttackAudioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -30,10 +38,33 @@ public class EnemyAttack : MonoBehaviour
     {
 
         inRange = this.transform.parent.GetComponentInParent<EnemyController>().inAttackRange;
+        animationEnd = Time.time;
+
+        if (initiateAttack == !stopMove) {
+            //movement of the beetle triggered to stop in enemyController through this bool
+            attackDelay = Time.time;
+            stopMove = true;
+            //attackWindup(attackDelay);
+            
+            //print(initiateAttack);
+        }
+
+        if ((animationEnd >= (attackDelay + animationDuration)) && stopMove) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
+        {
+            if (inAttackRange)
+            {
+                attackPlayer();
+                stopMove = false;
+                repeatAttack = true;
+            }
+            initiateAttack = false;
+
+        }
+
 
     }
 
-    void FixedUpdate()
+        void FixedUpdate()
     {
 
         if (attackCD < 0)
@@ -41,33 +72,27 @@ public class EnemyAttack : MonoBehaviour
             attackCD += 1;
         }
 
-        //code below must trigger after onTriggerStay       move this to update potentially so theres no delay
-
-        //if(initiateAttack = true{
-        //      //freeze movement of the beetle
-        //      attackWindup();
-        //      initiateAttack = false;
-        //      }
-        
     }
 
-    void attackWindup()
-    {
-        //attackDelay = Time.time;        //set time delay; might need to place this in fixedupdate tied to ontriggerstay somehow
-        //begin attack animation
-        //if (current Time.time == attackDelay + durationOfAnimation) {     //(at end of animation) 
-        //      attackPlayer()
-        //      }
+    //void attackWindup(float delay)
+    //{
 
-    }
+    //    while (stopMove)
+    //    {
+    //        if (Time.time == delay + animationDuration) // at animation point where attack makes contact (frame 45-50 beetle)
+    //        {     
+    //            attackPlayer();
+    //            stopMove = false;
+    //        }
+    //    }
+   
+    //}
 
     void attackPlayer()
     {
         currentPlayerHealth = Player.GetComponent<PlayerStats>().getHealth();
-        print(currentPlayerHealth);
-        Player.GetComponent<PlayerStats>().setHealth(currentAttack);
-        print(currentPlayerHealth);
-        attackCD = -100;
+        Player.GetComponent<PlayerStats>().setHealth(currentPlayerHealth - currentAttack);
+        attackCD = -300;
         if (!beetleAttackAudioSource.isPlaying)
         {
             beetleAttackAudioSource.clip = beetleAttackSound;
@@ -75,19 +100,46 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+        inAttackRange = true;
+
         if (inRange && attackCD >= 0)
         {
             if (other.transform.CompareTag("Player"))
             {
-                attackPlayer();                                 //comment this out after attack delat is complete
-                //initiateAttack = true;
+                initiateAttack = true;                            // animation begins in animationController here
             }
         }
+
     }
+
+    void OnTriggerStay(Collider other)
+    {
+
+        if (repeatAttack)
+        {
+            if (inRange && attackCD >= 0)
+            {
+                if (other.transform.CompareTag("Player"))
+                {
+                    //attackPlayer();                                 //comment this out after attack delat is complete
+                    initiateAttack = true;                            // animation begins in animationController here
+                }
+            }
+            repeatAttack = false;
+        }
+       
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        inAttackRange = false;
+    }   
+
 }
 
+ 
 
 //for time delay in attack: https://answers.unity.com/questions/1500346/i-am-trying-to-make-my-enemy-ai-have-an-attack-del.html
 //its not the same but essentially we want the delay to occur
