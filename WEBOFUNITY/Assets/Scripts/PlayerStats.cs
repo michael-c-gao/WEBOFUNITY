@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
+    public GameOverScreen GameOverScreen;
     public TextMeshProUGUI HealthText;
     public TextMeshProUGUI DamageText;
     public TextMeshProUGUI LifestealText;
@@ -36,6 +37,11 @@ public class PlayerStats : MonoBehaviour
         DamageText.text = "Damage: " + damage;
         LifestealText.text = "Lifesteal: " + lifesteal;
         SpeedText.text = "Speed: " + speed;
+
+        if(health <= 0)
+        {
+            GameOverScreen.Setup();
+        }
     }
 
 
