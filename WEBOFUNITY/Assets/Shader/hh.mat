@@ -30,7 +30,7 @@ Material:
     - _Rad: 0.6
     - _Radius: 2
     - _RandomHeight: 1
-    - _Strength: 1.25
+    - _Strength: 1
     - _WindSpeed: 100
     - _WindStrength: 0.1
     m_Colors:
