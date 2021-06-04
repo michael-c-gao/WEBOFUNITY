@@ -72,9 +72,11 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState =  CursorLockMode.Confined;
 
-        if (PauseMenu.isPaused)
-        { Cursor.visible = true; }
-        else { Cursor.visible = false; }
+        if (PauseMenu.isPaused){ 
+            Cursor.visible = true; 
+        }else{ 
+            Cursor.visible = false; 
+        }
         
         speedScalar = GetComponent<PlayerStats>().getSpeed() / speedScalarStartingSpeed;
         if(!Input.GetKey(KeyCode.Q))
@@ -83,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!PauseMenu.isPaused)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)
         {
             MyInput();
             if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)

@@ -19,7 +19,7 @@ public class PlayerAnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseMenu.isPaused)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)
         {
             if (Input.GetMouseButtonDown(1))
             {
