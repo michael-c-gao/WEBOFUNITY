@@ -8,7 +8,9 @@ public class PlayerAttack : MonoBehaviour
     private bool isAttacking;
     public GameObject spider;
 
-    float currentHealth = 0f;
+    float enemyHealth;
+    float currentHealth;
+    float currentAttack;
 
     private PlayerStats statsScript;
 
@@ -18,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
         isAttacking = false;
         statsScript = this.GetComponentInParent<PlayerStats>();
+        currentAttack = statsScript.getDamage();
 
     }
 
@@ -42,10 +45,17 @@ public class PlayerAttack : MonoBehaviour
         {
             if (other.transform.CompareTag("Beetle"))
             {
-                Object.Destroy(other.gameObject, 0.25f);
-                currentHealth = statsScript.getHealth();
-                statsScript.setHealth(currentHealth + 100f);
-
+                enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
+                other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
+                print("took damage");
+                print(currentAttack);
+                if (other.GetComponentInChildren<EnemyStats>().getHealth() == 0f)
+                {
+                    print("at 0 health");
+                    Object.Destroy(other.gameObject, 0.25f);
+                    currentHealth = statsScript.getHealth();
+                    statsScript.setHealth(currentHealth + 100f);
+                }
                 // statsScript.setDamage(statsScript.getDamage() + 1);
             }
 

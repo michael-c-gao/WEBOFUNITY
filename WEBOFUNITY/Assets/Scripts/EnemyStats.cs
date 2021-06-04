@@ -8,13 +8,11 @@ public class EnemyStats : MonoBehaviour
     public GameObject Player;
 
     public float BaseValue;
-    public float StartingHealth = 50;
-    public float StartingAttack = 20;
-    public float StartingSpeed = 3;       // speed doesnt do anything so far
+    public float StartingHealth;
+    public float StartingAttack;
 
     public float health;
     public float attack;
-    public float speed;
 
     //// These classes are to be used for the potential addition of scaling/modified enemy stats
     //public EnemyHealth(StartingHealth)
@@ -38,7 +36,6 @@ public class EnemyStats : MonoBehaviour
 
         health = StartingHealth;
         attack = StartingAttack;
-        speed = StartingSpeed;
 
         //display health as a bar
 
@@ -67,13 +64,5 @@ public class EnemyStats : MonoBehaviour
     public float getAttack()
     {
         return attack;
-    }
-    public void setSpeed(float newSpeed)
-    {
-        speed = newSpeed;
-    }
-    public float getSpeed()
-    {
-        return speed;
     }
 }

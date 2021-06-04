@@ -8,10 +8,10 @@ public class PlayerStats : MonoBehaviour
     public GameOverScreen GameOverScreen;
     public TextMeshProUGUI HealthText;
 
-    public float StartingHealth = 69f;
-    public float StartingDamage = 10f;
-    public float StartingLifesteal = 0f;
-    public float StartingSpeed = 10f;
+    public float StartingHealth;
+    public float StartingDamage;
+    public float StartingLifesteal;             //remove
+    public float StartingSpeed;                 //remove
 
     public float health;
     public float damage;
