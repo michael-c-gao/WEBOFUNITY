@@ -7,9 +7,6 @@ public class PlayerStats : MonoBehaviour
 {
     public GameOverScreen GameOverScreen;
     public TextMeshProUGUI HealthText;
-    public TextMeshProUGUI DamageText;
-    public TextMeshProUGUI LifestealText;
-    public TextMeshProUGUI SpeedText;
 
     public float StartingHealth = 69f;
     public float StartingDamage = 10f;
@@ -34,9 +31,6 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         HealthText.text = "Health: " + health;
-        DamageText.text = "Damage: " + damage;
-        LifestealText.text = "Lifesteal: " + lifesteal;
-        SpeedText.text = "Speed: " + speed;
 
         if(health <= 0)
         {

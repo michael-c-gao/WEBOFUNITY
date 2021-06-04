@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     public AudioClip beetleAttackSound;
     private AudioSource beetleAttackAudioSource;
-    
+
     public int attackCD = 0;
     
     public float attackDelay;
@@ -30,6 +30,7 @@ public class EnemyAttack : MonoBehaviour
 
         currentAttack = this.GetComponentInParent<EnemyStats>().attack;
         beetleAttackAudioSource = GetComponent<AudioSource>();
+        currentAttack = 20f;
 
     }
 
@@ -92,7 +93,7 @@ public class EnemyAttack : MonoBehaviour
     {
         currentPlayerHealth = Player.GetComponent<PlayerStats>().getHealth();
         Player.GetComponent<PlayerStats>().setHealth(currentPlayerHealth - currentAttack);
-        attackCD = -300;
+        attackCD = -100;
         if (!beetleAttackAudioSource.isPlaying)
         {
             beetleAttackAudioSource.clip = beetleAttackSound;
@@ -116,20 +117,15 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-
-        if (repeatAttack)
+        
+        if (inRange && attackCD >= 0)
         {
-            if (inRange && attackCD >= 0)
+            if (other.transform.CompareTag("Player"))
             {
-                if (other.transform.CompareTag("Player"))
-                {
-                    //attackPlayer();                                 //comment this out after attack delat is complete
-                    initiateAttack = true;                            // animation begins in animationController here
-                }
+                initiateAttack = true;                            // animation begins in animationController here
             }
-            repeatAttack = false;
         }
-       
+
     }
 
     void OnTriggerExit(Collider other)
