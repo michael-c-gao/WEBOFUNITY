@@ -104,7 +104,7 @@ MonoBehaviour:
   isDead: 0
   inAttackRange: 0
   isChasing: 0
-  lookRadius: 15
+  lookRadius: 13
   Player: {fileID: 0}
 --- !u!82 &1813807618290583406
 AudioSource:
