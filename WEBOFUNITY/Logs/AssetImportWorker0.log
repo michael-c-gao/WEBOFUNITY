@@ -1,0 +1,582 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.1f1 (77a89f25062f) revision 7841951'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1023; Version 2009; 64bit' Language: 'en' Physical Memory: 16178 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\unity\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/final/WEBOFUNITY/WEBOFUNITY
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51635
+Successfully changed project path to: D:/final/WEBOFUNITY/WEBOFUNITY
+D:/final/WEBOFUNITY/WEBOFUNITY
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 43.15 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.1f1 (77a89f25062f)
+[Subsystems] Discovering subsystems at path D:/unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/final/WEBOFUNITY/WEBOFUNITY/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.5771
+Initialize mono
+Mono path[0] = 'D:/unity/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007248 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 40.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.969 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001366 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.869 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1312 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.3 MB.
+System memory in use after: 86.3 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1782.
+Total: 1.731000 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.039800 ms MarkObjects: 1.417200 ms  DeleteObjects: 0.119300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Lamps_Fusebox.prefab
+  artifactKey: Guid(ca4ed40d4e7ea3d45965953d278552c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Lamps_Fusebox.prefab using Guid(ca4ed40d4e7ea3d45965953d278552c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09c8e0604e0c1be0daa3c37f95344ef4') in 0.207292 seconds
+  Import took 0.211824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001990 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Drill_Tool.prefab
+  artifactKey: Guid(09091dd7ec50274419dd96a34fbc4c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Drill_Tool.prefab using Guid(09091dd7ec50274419dd96a34fbc4c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01338ffd4169768972aaa16a3e9a3a44') in 0.326101 seconds
+  Import took 0.330311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001450 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Workbench_01.prefab
+  artifactKey: Guid(662af2cef67326b40a39ff66c41d3d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Workbench_01.prefab using Guid(662af2cef67326b40a39ff66c41d3d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203bd035e7be2e618cbd86878f8ee405') in 1.312577 seconds
+  Import took 1.321467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000598 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs
+  artifactKey: Guid(94dd515d58d2d664c996db27a9c44149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs using Guid(94dd515d58d2d664c996db27a9c44149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f16fad0283879dc622c61c732b1372b') in 0.006817 seconds
+  Import took 0.008966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000679 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Vice.prefab
+  artifactKey: Guid(24347def6b06f4e48bf568a032a448a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Vice.prefab using Guid(24347def6b06f4e48bf568a032a448a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2efe1ba7e46fa73a6e8dc12251967b15') in 0.025876 seconds
+  Import took 0.028551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000678 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Shelve_02.prefab
+  artifactKey: Guid(438f1cbad54f5004386539d29e32961a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Shelve_02.prefab using Guid(438f1cbad54f5004386539d29e32961a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49356fd3dc11f3bd9deefb0778c8dd6c') in 0.023132 seconds
+  Import took 0.025478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000562 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Toolbox.prefab
+  artifactKey: Guid(6e72ee31f609cfb42a895eab8b1128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Toolbox.prefab using Guid(6e72ee31f609cfb42a895eab8b1128b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce9e20f89de9214c817d0b8f2b362a4') in 0.022259 seconds
+  Import took 0.024575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000669 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/workbench.prefab
+  artifactKey: Guid(c4ff103aa2ef7264480b416fd44f412f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/workbench.prefab using Guid(c4ff103aa2ef7264480b416fd44f412f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f1416d60e58d3c901ade826a91d79e') in 0.022566 seconds
+  Import took 0.025292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000502 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/street.prefab
+  artifactKey: Guid(a3915946df7fa1f469b7f1eeb52046f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/street.prefab using Guid(a3915946df7fa1f469b7f1eeb52046f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e71360c4d7e3261d1fa027d24412bc5b') in 0.020508 seconds
+  Import took 0.022703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000451 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Wooden_Garage.prefab
+  artifactKey: Guid(1fd36c41e050e1e4ebc62caea2b8e9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Wooden_Garage.prefab using Guid(1fd36c41e050e1e4ebc62caea2b8e9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '247fc534f98e087aa45e92e699aaf3a3') in 0.101136 seconds
+  Import took 0.108872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Fusebox_01.prefab
+  artifactKey: Guid(8cbd642b3abecde418d9fea366421924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Fusebox_01.prefab using Guid(8cbd642b3abecde418d9fea366421924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff44dbf448097b2da4f9b13b0463f64') in 0.205607 seconds
+  Import took 0.207879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000512 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs
+  artifactKey: Guid(df8188d226b04444cabd021cfa50be47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs using Guid(df8188d226b04444cabd021cfa50be47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7da066b6231e191d59fe18608b63952') in 0.004988 seconds
+  Import took 0.007055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000455 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Shelve_02.prefab
+  artifactKey: Guid(5cdc78caae4434a4d8362cb435781f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Shelve_02.prefab using Guid(5cdc78caae4434a4d8362cb435781f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d7121971ac21c308734694a169e492') in 0.108837 seconds
+  Import took 0.116355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000797 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Shelve_01.prefab
+  artifactKey: Guid(81da89fac1d779342a4a6ac101942c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Premade_Prefabs/Shelve_01.prefab using Guid(81da89fac1d779342a4a6ac101942c5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a1b43e7a6ba23d002592cc1fba3a4c') in 0.061981 seconds
+  Import took 0.066882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Fusebox_02.prefab
+  artifactKey: Guid(0b1adc947f3e98849891ca3b80a3fa13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Fusebox_02.prefab using Guid(0b1adc947f3e98849891ca3b80a3fa13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17038fb3089580ba60fd8769563ceb9d') in 0.022952 seconds
+  Import took 0.025433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000575 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Shelve_01.prefab
+  artifactKey: Guid(5f7c81e16a1931840a8a1427f13a509b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Shelve_01.prefab using Guid(5f7c81e16a1931840a8a1427f13a509b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b8cada39c6b356fca4aa780c5123627') in 0.020416 seconds
+  Import took 0.022672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.215842 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash
+  artifactKey: Guid(23bb889668f3e1248a67ef31c5a2df42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash using Guid(23bb889668f3e1248a67ef31c5a2df42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc58c7a1713148500ad31a1b7beb04c') in 0.005156 seconds
+  Import took 0.007418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051017 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/beer.prefab
+  artifactKey: Guid(db0729c9e1163f945bd3f8888134435f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/beer.prefab using Guid(db0729c9e1163f945bd3f8888134435f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f8d8672290a64d112bcf14b543ffa5') in 0.022578 seconds
+  Import took 0.025013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000700 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/Plank.prefab
+  artifactKey: Guid(8394e98c7e1249543b58f987a7b4df46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/Plank.prefab using Guid(8394e98c7e1249543b58f987a7b4df46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d9690941828a77f6563669277988c59') in 0.020782 seconds
+  Import took 0.023120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000577 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/Trash_Big.prefab
+  artifactKey: Guid(f162bee5b951218469775cfad4a00840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/Trash_Big.prefab using Guid(f162bee5b951218469775cfad4a00840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6587e65e2363a08c3c175020dd49fbd') in 0.020281 seconds
+  Import took 0.023077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000624 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/box_01.prefab
+  artifactKey: Guid(696d0e928f8802945b4290522cb6d54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/box_01.prefab using Guid(696d0e928f8802945b4290522cb6d54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f88c9cb184c68b74e5a9c5e177d70f4') in 0.020421 seconds
+  Import took 0.023750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000729 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/Tires.prefab
+  artifactKey: Guid(6795b289a4ab42440879c6f1da899d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/Tires.prefab using Guid(6795b289a4ab42440879c6f1da899d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf0e95dabb7cd9a7062de264d72349e') in 0.021008 seconds
+  Import took 0.023385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/box_02.prefab
+  artifactKey: Guid(371e47cce5d9cfe4ba46e6f3b88925b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/box_02.prefab using Guid(371e47cce5d9cfe4ba46e6f3b88925b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44751b9e86c6615bcd4d5e60316df7b6') in 0.020107 seconds
+  Import took 0.022455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000463 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Trash/Trashbag.prefab
+  artifactKey: Guid(8ef09937fba2a9d49ad2cf044ae81b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Trash/Trashbag.prefab using Guid(8ef09937fba2a9d49ad2cf044ae81b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c880ca85eb38fe72c863140e7f810312') in 0.021772 seconds
+  Import took 0.024343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.676194 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools
+  artifactKey: Guid(4a93b5b462cb2034d8184a05ebf530ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools using Guid(4a93b5b462cb2034d8184a05ebf530ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c043d92f1cc47c731c488f9d653f21') in 0.006543 seconds
+  Import took 0.008845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.048555 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Hammer.prefab
+  artifactKey: Guid(5221138ead28d2946a776f340969c5f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Hammer.prefab using Guid(5221138ead28d2946a776f340969c5f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b05118e543b878561c6965f462d655') in 0.024626 seconds
+  Import took 0.027312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Metal_saw.prefab
+  artifactKey: Guid(3e55ac558bfc8f44e9ce7595ca8c3f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Metal_saw.prefab using Guid(3e55ac558bfc8f44e9ce7595ca8c3f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c3f3637df48a22fa7e30e642293f29') in 0.095991 seconds
+  Import took 0.098767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Metal_File.prefab
+  artifactKey: Guid(4e427245472808d43b391895d814d506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Metal_File.prefab using Guid(4e427245472808d43b391895d814d506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21c8dbdc7b4fe69b60c8408b8a931808') in 0.023258 seconds
+  Import took 0.025926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000509 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Wrench.prefab
+  artifactKey: Guid(d27707b2c117c8441a61d20c91a916eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Wrench.prefab using Guid(d27707b2c117c8441a61d20c91a916eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856d15710f80d83332c3cc9c1570f1ac') in 0.022914 seconds
+  Import took 0.025845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000596 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Socket_Wrench.prefab
+  artifactKey: Guid(04ec8772517a6384184e48b08bf16c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Socket_Wrench.prefab using Guid(04ec8772517a6384184e48b08bf16c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3cb0365edb5f431fb9f9169c3431a85') in 0.022501 seconds
+  Import took 0.025246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000672 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Screwdriver.prefab
+  artifactKey: Guid(0f240c3bf936e0b408d78b10bde7663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Screwdriver.prefab using Guid(0f240c3bf936e0b408d78b10bde7663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf95c050144fdd36ef47dad39742d5f2') in 0.022801 seconds
+  Import took 0.025951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Tools/Pliers.prefab
+  artifactKey: Guid(c44845c2f984d2f4389885a7aeb14937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Tools/Pliers.prefab using Guid(c44845c2f984d2f4389885a7aeb14937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ab5b4b8b07004238b0c402d809c3570') in 0.022038 seconds
+  Import took 0.024764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.661609 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02
+  artifactKey: Guid(9a920e52ee80e354eb6ecd173a156956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02 using Guid(9a920e52ee80e354eb6ecd173a156956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '803b967fe0090dd4e9667c20d243f777') in 0.005419 seconds
+  Import took 0.007694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073920 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Bottle.prefab
+  artifactKey: Guid(e96a4e8843c350647bc264c3e3ede87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Bottle.prefab using Guid(e96a4e8843c350647bc264c3e3ede87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bb0b9337d9034c267c02a0476b1a0e4') in 0.021240 seconds
+  Import took 0.023913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Small.prefab
+  artifactKey: Guid(52beb1582f548a1479e140f856c3a20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Small.prefab using Guid(52beb1582f548a1479e140f856c3a20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4b211ea3024720023e8c7cee3bcbef') in 0.026097 seconds
+  Import took 0.028716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000623 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Small_Cap.prefab
+  artifactKey: Guid(e6e8c24b6490a174ca0d508f60e76af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Small_Cap.prefab using Guid(e6e8c24b6490a174ca0d508f60e76af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1aa2b0ea352dafad02b906ef7651efc') in 0.025627 seconds
+  Import took 0.028342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000548 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Oil.prefab
+  artifactKey: Guid(253c5e6c606213b48acd5ad315d3b0e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Oil.prefab using Guid(253c5e6c606213b48acd5ad315d3b0e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd599d18840d7069a25b1149c4ddadcb6') in 0.021530 seconds
+  Import took 0.024216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Solvent.prefab
+  artifactKey: Guid(01cdb868dda546d45849717c5c6dbf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Solvent.prefab using Guid(01cdb868dda546d45849717c5c6dbf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44944e9ca9595481533988bb012b703d') in 0.023223 seconds
+  Import took 0.025930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000583 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Big.prefab
+  artifactKey: Guid(3d61fcf0fd646a34b9979c916567399f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Paint_Big.prefab using Guid(3d61fcf0fd646a34b9979c916567399f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e74bdf4b18096433d758e766ea4c7f3') in 0.021974 seconds
+  Import took 0.024845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000561 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Box.prefab
+  artifactKey: Guid(c3cd15ee2a9d24648abf971b9a85d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_02/Box.prefab using Guid(c3cd15ee2a9d24648abf971b9a85d8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1982c10a0d4786ed716d857d9d5f4cd9') in 0.021787 seconds
+  Import took 0.024464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.413979 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01
+  artifactKey: Guid(930aaae76d1ae8c49981e07655a9f60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01 using Guid(930aaae76d1ae8c49981e07655a9f60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6484852ffc05ccb71ff705566f7cb8f6') in 0.006966 seconds
+  Import took 0.009483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037836 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Bottle.prefab
+  artifactKey: Guid(534c52d20c7f03f40a2e8e5fdcf19593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Bottle.prefab using Guid(534c52d20c7f03f40a2e8e5fdcf19593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487a3698f855d44b462998d48b95eb4e') in 0.021243 seconds
+  Import took 0.023941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000489 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Box.prefab
+  artifactKey: Guid(8b8e4ff1cfcab8b48a0a67ecc6c10cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Box.prefab using Guid(8b8e4ff1cfcab8b48a0a67ecc6c10cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df3bdb06dde37d37ccb89fa1f3c191a7') in 0.024084 seconds
+  Import took 0.026681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000583 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Big.prefab
+  artifactKey: Guid(a833a904361aeb448b337e91eda4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Big.prefab using Guid(a833a904361aeb448b337e91eda4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765e815930521ba032757a0cc72a19ba') in 0.022895 seconds
+  Import took 0.025565 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Small_Cap.prefab
+  artifactKey: Guid(115ff3d457263ba4380344e1d73d5aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Small_Cap.prefab using Guid(115ff3d457263ba4380344e1d73d5aef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '439a4e41a9ee0b6000fef32b6bca38b3') in 0.023374 seconds
+  Import took 0.026009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Solvent.prefab
+  artifactKey: Guid(69936f0ad650dc14999a19d8ca08c866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Solvent.prefab using Guid(69936f0ad650dc14999a19d8ca08c866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93940f8661a9c40a83d071f15f052f7c') in 0.023148 seconds
+  Import took 0.025977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000530 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Small.prefab
+  artifactKey: Guid(8c0f7301f7fd2a54ba1127913dd0b6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Paint_Small.prefab using Guid(8c0f7301f7fd2a54ba1127913dd0b6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '477623513b8901beff190b5103a22010') in 0.023051 seconds
+  Import took 0.026138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000482 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Oil.prefab
+  artifactKey: Guid(ff73089b971ba4d4a8bee6af1081a6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Small_Props_01/Oil.prefab using Guid(ff73089b971ba4d4a8bee6af1081a6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c945e35caa677f4fa947a36beaf1ea7f') in 0.024512 seconds
+  Import took 0.027194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 196.981518 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park
+  artifactKey: Guid(745ebd8e37b9b5145aa5ad19f4955d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park using Guid(745ebd8e37b9b5145aa5ad19f4955d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf6314c2984146543a12154847ac00ea') in 0.006632 seconds
+  Import took 0.008813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.423345 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car
+  artifactKey: Guid(037fdd68cc618ee4fb5fe588651c427e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car using Guid(037fdd68cc618ee4fb5fe588651c427e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be953b679830d3fc3c3e481b0bcda5e') in 0.012587 seconds
+  Import took 0.015023 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.990691 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs
+  artifactKey: Guid(19d74601b1203aa42a366f12e794bf09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs using Guid(19d74601b1203aa42a366f12e794bf09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e214257d71bce89ffc52cde40ec64317') in 0.004563 seconds
+  Import took 0.006852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038462 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/El_Redneck.prefab
+  artifactKey: Guid(32d44c7a7168d9648a7c921e6b5102a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/El_Redneck.prefab using Guid(32d44c7a7168d9648a7c921e6b5102a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02928a7f4c510f5492d60a5125fa7f80') in 0.024429 seconds
+  Import took 0.027162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000548 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/El_Redneck_Broken.prefab
+  artifactKey: Guid(7fdc4160cd0edc44f9b62832e8d205d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/El_Redneck_Broken.prefab using Guid(7fdc4160cd0edc44f9b62832e8d205d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121d49cd5e4c1c08081a796531b8199b') in 0.072765 seconds
+  Import took 0.075286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000579 seconds.
+  path: Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/Tire_Stack.prefab
+  artifactKey: Guid(d9d54507deb34a84eaa390e316aa031a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Trailer_Park/EL_Redneck_Car/Prefabs/Tire_Stack.prefab using Guid(d9d54507deb34a84eaa390e316aa031a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8636348cc40d02ae29e4e3abe05f2c73') in 0.019595 seconds
+  Import took 0.022307 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001219 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.859 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1288 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.1 MB.
+System memory in use after: 88.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1794.
+Total: 1.782300 ms (FindLiveObjects: 0.240200 ms CreateObjectMapping: 0.078300 ms MarkObjects: 1.362400 ms  DeleteObjects: 0.100000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 658.732045 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes
+  artifactKey: Guid(25bc45f19a014744fb677801b9fca44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes using Guid(25bc45f19a014744fb677801b9fca44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e34a3c9c5ceff7ef64a559adbcee1bb7') in 0.006876 seconds
+  Import took 0.009170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.337254 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_corner_01.prefab
+  artifactKey: Guid(d861e4684f6f8de419c92650d13c12a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_corner_01.prefab using Guid(d861e4684f6f8de419c92650d13c12a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5c6bc4531bffb09e238a709a26caedb') in 0.075469 seconds
+  Import took 0.077787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000484 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_T.prefab
+  artifactKey: Guid(564955c607a168543a654a87ebdfc853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_T.prefab using Guid(564955c607a168543a654a87ebdfc853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7badfea1d1678893ac457936cbd7709d') in 0.019524 seconds
+  Import took 0.021668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_straight.prefab
+  artifactKey: Guid(62f1acf04f0e02f4ebd14667b0111de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_straight.prefab using Guid(62f1acf04f0e02f4ebd14667b0111de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa3ea65fe43611b927900d4f377fb18') in 0.021894 seconds
+  Import took 0.024215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_corner_02.prefab
+  artifactKey: Guid(c9abef75c6463b346a71174408a474ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_corner_02.prefab using Guid(c9abef75c6463b346a71174408a474ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ec7cce8590b133d82f41c191a8b2355') in 0.023469 seconds
+  Import took 0.025706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_spacing.prefab
+  artifactKey: Guid(b61e116cfce6b0144be3d96a28c4f3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Wooden_Garage_Environment/Prefabs/Pipes/pipe_spacing.prefab using Guid(b61e116cfce6b0144be3d96a28c4f3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c54d2fb872b9b27af5a13cf18d886122') in 0.022464 seconds
+  Import took 0.025067 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
