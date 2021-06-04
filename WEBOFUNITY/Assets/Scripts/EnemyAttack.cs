@@ -75,20 +75,6 @@ public class EnemyAttack : MonoBehaviour
 
     }
 
-    //void attackWindup(float delay)
-    //{
-
-    //    while (stopMove)
-    //    {
-    //        if (Time.time == delay + animationDuration) // at animation point where attack makes contact (frame 45-50 beetle)
-    //        {     
-    //            attackPlayer();
-    //            stopMove = false;
-    //        }
-    //    }
-   
-    //}
-
     void attackPlayer()
     {
         currentPlayerHealth = Player.GetComponent<PlayerStats>().getHealth();
@@ -103,13 +89,14 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        inAttackRange = true;
 
         if (inRange && attackCD >= 0)
         {
             if (other.transform.CompareTag("Player"))
             {
                 initiateAttack = true;                            // animation begins in animationController here
+                inAttackRange = true;
+                print("entered attack");
             }
         }
 
@@ -130,6 +117,7 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        print("exit attack");
         inAttackRange = false;
     }   
 

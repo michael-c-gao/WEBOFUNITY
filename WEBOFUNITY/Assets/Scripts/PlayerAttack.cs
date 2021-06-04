@@ -6,8 +6,9 @@ public class PlayerAttack : MonoBehaviour
 {
 
     private bool isAttacking;
-    public GameObject player;
     public GameObject spider;
+
+    float currentHealth = 0f;
 
     private PlayerStats statsScript;
 
@@ -16,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     {
 
         isAttacking = false;
-        statsScript = player.GetComponent<PlayerStats>();
+        statsScript = this.GetComponentInParent<PlayerStats>();
 
     }
 
@@ -41,8 +42,10 @@ public class PlayerAttack : MonoBehaviour
         {
             if (other.transform.CompareTag("Beetle"))
             {
-                Object.Destroy(other.gameObject, 0.25f);                //want this to occur after death animatin
-                
+                Object.Destroy(other.gameObject, 0.25f);
+                currentHealth = statsScript.getHealth();
+                statsScript.setHealth(currentHealth + 100f);
+
                 // statsScript.setDamage(statsScript.getDamage() + 1);
             }
 
