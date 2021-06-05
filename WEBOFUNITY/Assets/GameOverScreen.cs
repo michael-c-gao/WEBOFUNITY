@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public static bool isGameOver = false;
+    public Transform teleportTarget;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void Setup()
     {
-        isGameOver = true;
+        
         gameObject.SetActive(true);
     }
 
@@ -29,7 +31,9 @@ public class GameOverScreen : MonoBehaviour
     {
         isGameOver = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Enviro");
+        PlayerStats.health = 100;
+        Player.transform.position = teleportTarget.transform.position;
+        gameObject.SetActive(false);
     }
 
     public void ExitButton()

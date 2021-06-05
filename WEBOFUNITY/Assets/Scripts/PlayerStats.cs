@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
     public float StartingLifesteal;             //remove
     public float StartingSpeed;                 //remove
 
-    public float health;
+    public static float health;
     public float damage;
     public float lifesteal;
     public float speed;
