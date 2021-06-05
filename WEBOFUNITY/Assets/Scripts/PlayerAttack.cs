@@ -49,10 +49,21 @@ public class PlayerAttack : MonoBehaviour
                 other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
                 print("took damage");
                 print(currentAttack);
-                if (other.GetComponentInChildren<EnemyStats>().getHealth() == 0f)
+                if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
                 {
                     print("at 0 health");
+                    if(other.gameObject.transform.parent != null)
+                    {
+                        Destroy(other.gameObject.transform.parent.gameObject);
+                    }
+
+                    for (int i = 0; i < other.gameObject.transform.childCount; i++)
+                    {
+                        Destroy(other.gameObject.transform.GetChild(i).gameObject);
+                    }
+                    
                     Object.Destroy(other.gameObject, 0.25f);
+                    
                     currentHealth = statsScript.getHealth();
                     statsScript.setHealth(currentHealth + 100f);
                 }
