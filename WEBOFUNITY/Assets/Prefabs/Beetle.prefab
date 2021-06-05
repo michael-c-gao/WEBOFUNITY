@@ -232,7 +232,7 @@ MonoBehaviour:
   StartingHealth: 100
   StartingAttack: 20
   health: 0
-  attack: 0
+  attack: 20
 --- !u!114 &5680435773563559692
 MonoBehaviour:
   m_ObjectHideFlags: 0

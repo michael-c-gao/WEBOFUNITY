@@ -30,7 +30,6 @@ public class EnemyAttack : MonoBehaviour
 
         currentAttack = this.GetComponentInParent<EnemyStats>().attack;
         beetleAttackAudioSource = GetComponent<AudioSource>();
-        currentAttack = 20f;
 
     }
 
