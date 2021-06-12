@@ -18,15 +18,17 @@ public class PauseMenu : MonoBehaviour
     public void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (isPaused)
             {
+                Cursor.visible = false;
                 ResumeGame();
             }
             else
             {
                 PauseGame();
+                Cursor.visible = true;
             }
         }
     }
