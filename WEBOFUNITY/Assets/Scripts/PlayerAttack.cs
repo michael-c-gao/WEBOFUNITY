@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
 
     private bool isAttacking;
     public GameObject spider;
+    public GameOverScreen GameOverScreen;
 
     float enemyHealth;
     float currentHealth;
@@ -28,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
 
+
         if (Input.GetMouseButtonDown(1))
         {
             isAttacking = true;
@@ -41,9 +43,42 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+
+
         if (isAttacking)
         {
-            if (other.transform.CompareTag("Beetle"))
+            if (other.transform.CompareTag("hello"))
+            {
+                
+                enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
+                other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
+               
+                if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
+                {
+
+
+
+                    GameOverScreen.Setup();
+                    
+                    if (other.gameObject.transform.parent != null)
+                    {
+                        Destroy(other.gameObject.transform.parent.gameObject);
+
+                    }
+
+                    for (int i = 0; i < other.gameObject.transform.childCount; i++)
+                    {
+                        Destroy(other.gameObject.transform.GetChild(i).gameObject);
+                    }
+
+                    Object.Destroy(other.gameObject, 0.25f);
+
+                    currentHealth = statsScript.getHealth();
+                    statsScript.setHealth(currentHealth + 100f);
+                }
+                
+            }
+            else
             {
                 enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
                 other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
@@ -51,8 +86,10 @@ public class PlayerAttack : MonoBehaviour
                 print(currentAttack);
                 if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
                 {
+
+
                     print("at 0 health");
-                    if(other.gameObject.transform.parent != null)
+                    if (other.gameObject.transform.parent != null)
                     {
                         Destroy(other.gameObject.transform.parent.gameObject);
                     }
@@ -61,71 +98,21 @@ public class PlayerAttack : MonoBehaviour
                     {
                         Destroy(other.gameObject.transform.GetChild(i).gameObject);
                     }
-                    
+
                     Object.Destroy(other.gameObject, 0.25f);
-                    
+
                     currentHealth = statsScript.getHealth();
                     statsScript.setHealth(currentHealth + 100f);
                 }
-                // statsScript.setDamage(statsScript.getDamage() + 1);
+                
             }
 
             isAttacking = false;
+
+
+
+
+
         }
     }
-    //private bool isAttacking;
-    //public GameObject player;
-    //public GameObject spider;
-
-    //private PlayerStats statsScript;
-    //float playerAttack = 0f;
-
-    //float enemyHealth = 0f;
-
-    //public GameObject Beetle;
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //    isAttacking = false;
-    //    statsScript = player.GetComponent<PlayerStats>();
-    //    playerAttack = player.GetComponent<PlayerStats>().damage;
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //    if (Input.GetMouseButtonDown(1))
-    //    {
-    //        isAttacking = true;
-    //    }
-    //    else if (Input.GetMouseButtonUp(1))
-    //    {
-    //        isAttacking = false;
-    //    }
-
-    //}
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (isAttacking)
-    //    {
-    //        if (other.transform.CompareTag("Beetle"))
-    //        {
-    //            //object.destroy(other.gameobject, 0.25f);                //want this to occur after death animatin
-    //            enemyHealth = Beetle.GetComponentInChildren<EnemyStats>().getHealth();
-
-    //            Beetle.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - playerAttack);
-
-    //            if ((Beetle.GetComponentInChildren<EnemyStats>().getHealth()) == 0)
-    //            {
-    //                Object.Destroy(other.gameObject, 0.25f);
-    //            }
-    //            statsScript.setDamage(statsScript.getDamage() + 1);
-    //        }
-    //    }
-    //}
 }

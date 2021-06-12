@@ -6,6 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
 
     public GameObject Player;
+    public GameOverScreen GameOverScreen;
 
     public float BaseValue;
     public float StartingHealth;
@@ -44,6 +45,10 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            GameOverScreen.Setup();
+        }
         //if enemy.attack triggers on player
         //  player.playerhealth -= enemy.attack
     }
