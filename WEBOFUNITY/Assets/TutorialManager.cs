@@ -6,7 +6,8 @@ public class TutorialManager : MonoBehaviour
 {
     public GameObject[] popUps;
     private int popUpIndex = 0;
-    
+    public int x = 0;
+
 
 
     void Update()
@@ -36,9 +37,10 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
+        
 
-
-        }
+    }
+   
 
         }
 
