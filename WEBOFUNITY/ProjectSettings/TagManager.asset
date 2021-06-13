@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - StatIncreaser
-  - Ant
-  - Beetle
-  - Boss
-  - hello
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,9 +12,9 @@ TagManager:
   - Water
   - UI
   - 
-  - Floor
-  - Ground
-  - Grapple
+  - 
+  - 
+  - 
   - 
   - 
   - 
