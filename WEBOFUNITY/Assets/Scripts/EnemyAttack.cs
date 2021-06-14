@@ -49,7 +49,7 @@ public class EnemyAttack : MonoBehaviour
             //print(initiateAttack);
         }
 
-        if ((animationEnd >= (attackDelay + animationDuration)) && stopMove) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
+        if ((animationEnd >= (attackDelay + animationDuration)) && stopMove ) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
         {
             if (inAttackRange)
             {
@@ -121,13 +121,3 @@ public class EnemyAttack : MonoBehaviour
     }   
 
 }
-
- 
-
-//for time delay in attack: https://answers.unity.com/questions/1500346/i-am-trying-to-make-my-enemy-ai-have-an-attack-del.html
-//its not the same but essentially we want the delay to occur
-//prior to the attack not inbetween
-
-//processof thot
-//ontriggerstay ->trigger animation +timer ->damage calculation afteer animation ends(timer ends) and IF PLAYER IS STILL IN ATTACKSPHERE
-//not sure how to do the last one, occurs in ontriggerstay so obtain a bool from there to check if player is still in range

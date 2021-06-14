@@ -12,24 +12,25 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.SetActive(true);
         isGameOver = true;
         Time.timeScale = 0;
-    }
-    void Update()
-    {
-        
         Cursor.visible = true;
     }
 
+
     public void Setup()
     {
-        
+        Time.timeScale = 0;
         gameObject.SetActive(true);
+        isGameOver = true;
+        Cursor.visible = true;
     }
 
     public void Restart()
     {
         isGameOver = false;
+        Cursor.visible = false;
         Time.timeScale = 1;
         PlayerStats.health = 100;
         Player.transform.position = teleportTarget.transform.position;

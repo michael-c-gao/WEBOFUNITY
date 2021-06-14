@@ -36,7 +36,6 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
 
         isChasing = chaseStatus(distance);
-        //print(isChasing);
 
         if(isChasing)
         {
@@ -77,7 +76,7 @@ public class EnemyController : MonoBehaviour
 
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 0.75f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 0.95f);
     
     }
 

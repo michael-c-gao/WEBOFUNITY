@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver && !GameWin.isWin)
         {
             MyInput();
             if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)

@@ -6,18 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class GameWin : MonoBehaviour
 {
-
+    public static bool isWin = false;
 
     // Start is called before the first frame update
-    public void Setup()
+    public void Start()
     {
 
         gameObject.SetActive(true);
-    }
+        isWin = true;
+}
 
     public void ExiteButton()
     {
-        
+        isWin = false;
         Time.timeScale = 1;
         SceneManager.LoadScene("menu");
     }

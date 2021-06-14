@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\TutorialManager.cs" />
      <Compile Include="Assets\Scripts\StatIncreaserScript.cs" />
+     <Compile Include="Assets\Brick Town LITE\Scripts\FreeCamera.cs" />
      <Compile Include="Assets\RDL\Security_Pack\Scripts\scr_camera.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Lift Car\Script\Moveliftcar.cs" />
@@ -114,6 +115,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Brick Town LITE\Read Me__Download CrossplatformInput.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="UnityEngine">
  <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

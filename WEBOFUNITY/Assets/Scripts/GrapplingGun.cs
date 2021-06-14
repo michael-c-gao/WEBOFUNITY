@@ -29,7 +29,7 @@ public class GrapplingGun : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver && !GameWin.isWin)
         {
             //We want the aim cursor to be at the center of the screen
             transform.position = camera.position + gunPositionAdjuster;
