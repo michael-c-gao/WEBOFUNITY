@@ -74,7 +74,7 @@ public class PlayerAttack : MonoBehaviour
                     Object.Destroy(other.gameObject, 0.25f);
 
                     currentHealth = statsScript.getHealth();
-                    statsScript.setHealth(currentHealth + 100f);
+                    statsScript.setHealth(currentHealth + 80f);
                 }
                 
             }
@@ -102,7 +102,7 @@ public class PlayerAttack : MonoBehaviour
                     Object.Destroy(other.gameObject, 0.25f);
 
                     currentHealth = statsScript.getHealth();
-                    statsScript.setHealth(currentHealth + 100f);
+                    statsScript.setHealth(currentHealth + 80f);
                 }
                 
             }
