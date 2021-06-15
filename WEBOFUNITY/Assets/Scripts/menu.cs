@@ -18,6 +18,9 @@ public class menu : MonoBehaviour
     public void PlayGame()
     {
         Cursor.visible = true;
+        GameOverScreen.isGameOver = false;
+        PauseMenu.isPaused = false;
+        GameWin.isWin = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         Time.timeScale = 1;

@@ -41,6 +41,7 @@ public class GameOverScreen : MonoBehaviour
     {
         isGameOver = false;
         Time.timeScale = 1;
+        gameObject.SetActive(false);
         SceneManager.LoadScene("menu");
     }
 }

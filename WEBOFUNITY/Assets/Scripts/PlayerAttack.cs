@@ -49,17 +49,17 @@ public class PlayerAttack : MonoBehaviour
         {
             if (other.transform.CompareTag("hello"))
             {
-                
+
                 enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
                 other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
-               
+
                 if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
                 {
 
 
 
                     GameOverScreen.Setup();
-                    
+
                     if (other.gameObject.transform.parent != null)
                     {
                         Destroy(other.gameObject.transform.parent.gameObject);
@@ -76,22 +76,29 @@ public class PlayerAttack : MonoBehaviour
                     currentHealth = statsScript.getHealth();
                     statsScript.setHealth(currentHealth + 80f);
                 }
-                
+
             }
-            else
+        }
+
+        if (isAttacking)
+        {
+            if (other.transform.CompareTag("Beetle"))
             {
+
                 enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
                 other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
-                print("took damage");
-                print(currentAttack);
+
                 if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
                 {
 
 
-                    print("at 0 health");
+
+                    
+
                     if (other.gameObject.transform.parent != null)
                     {
                         Destroy(other.gameObject.transform.parent.gameObject);
+
                     }
 
                     for (int i = 0; i < other.gameObject.transform.childCount; i++)
@@ -104,15 +111,20 @@ public class PlayerAttack : MonoBehaviour
                     currentHealth = statsScript.getHealth();
                     statsScript.setHealth(currentHealth + 80f);
                 }
-                
+
             }
-
-            isAttacking = false;
-
-
-
-
-
         }
+        isAttacking = false;
+
     }
+
+                
+
+
+
+
+
+            
+        
+    
 }
