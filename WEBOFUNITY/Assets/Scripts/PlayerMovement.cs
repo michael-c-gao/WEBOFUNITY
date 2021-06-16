@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!spiderAudio.isPlaying)
                 {
-                    //print("Clip should be playing");
+                    
                     spiderAudio.clip = spiderWalkSound;
                     spiderAudio.Play();
                 }
@@ -111,8 +111,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void MyInput()
     {
-        x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("Vertical");
+        x = Input.GetAxisRaw("Horizontal")*1.25f;
+        y = Input.GetAxisRaw("Vertical")* 1.25f;
         jumping = Input.GetButton("Jump");
         
 

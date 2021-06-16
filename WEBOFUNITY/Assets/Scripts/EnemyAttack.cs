@@ -49,7 +49,7 @@ public class EnemyAttack : MonoBehaviour
             //print(initiateAttack);
         }
 
-        if ((animationEnd >= ((attackDelay + animationDuration)-1.5)) && stopMove ) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
+        if ((animationEnd >= ((attackDelay + animationDuration))) && stopMove ) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
         {
             if (inAttackRange)
             {

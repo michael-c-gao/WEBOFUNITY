@@ -41,6 +41,97 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (isAttacking)
+        {
+            if (other.transform.CompareTag("Beetle"))
+            {
+                enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
+                other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
+                print("took damage");
+                print(currentAttack);
+                if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
+                {
+                    print("at 0 health");
+                    if (other.gameObject.transform.parent != null)
+                    {
+                        Destroy(other.gameObject.transform.parent.gameObject);
+                    }
+
+                    for (int i = 0; i < other.gameObject.transform.childCount; i++)
+                    {
+                        Destroy(other.gameObject.transform.GetChild(i).gameObject);
+                    }
+
+                    Object.Destroy(other.gameObject, 0.25f);
+
+                    currentHealth = statsScript.getHealth();
+                    statsScript.setHealth(currentHealth + 60f);
+                }
+                // statsScript.setDamage(statsScript.getDamage() + 1);
+            }
+
+
+
+
+
+
+            if (other.transform.CompareTag("hello"))
+            {
+                enemyHealth = other.GetComponentInChildren<EnemyStats>().getHealth();
+                other.GetComponentInChildren<EnemyStats>().setHealth(enemyHealth - currentAttack);
+                print("took damage");
+                print(currentAttack);
+                if (other.GetComponentInChildren<EnemyStats>().getHealth() <= 0f)
+                {
+                    GameOverScreen.Setup();
+                    if (other.gameObject.transform.parent != null)
+                    {
+                        Destroy(other.gameObject.transform.parent.gameObject);
+                    }
+
+                    for (int i = 0; i < other.gameObject.transform.childCount; i++)
+                    {
+                        Destroy(other.gameObject.transform.GetChild(i).gameObject);
+                    }
+
+                    Object.Destroy(other.gameObject, 0.25f);
+
+                    currentHealth = statsScript.getHealth();
+                    statsScript.setHealth(currentHealth + 100f);
+                }
+                // statsScript.setDamage(statsScript.getDamage() + 1);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            isAttacking = false;
+        }
+    }
+
+
+
+  /*
     private void OnTriggerStay(Collider other)
     {
 
@@ -78,10 +169,7 @@ public class PlayerAttack : MonoBehaviour
                 }
 
             }
-        }
-
-        if (isAttacking)
-        {
+       
             if (other.transform.CompareTag("Beetle"))
             {
 
@@ -113,12 +201,13 @@ public class PlayerAttack : MonoBehaviour
                 }
 
             }
+            isAttacking = false;
         }
-        isAttacking = false;
+        
 
     }
 
-                
+     */           
 
 
 

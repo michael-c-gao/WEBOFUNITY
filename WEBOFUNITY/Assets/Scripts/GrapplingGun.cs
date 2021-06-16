@@ -77,15 +77,13 @@ public class GrapplingGun : MonoBehaviour
         }
     }
 
-    //Called after Update
+    
     void LateUpdate()
     {
         DrawRope();
     }
 
-    /// <summary>
-    /// Call whenever we want to start a grapple
-    /// </summary>
+    
     void StartGrapple()
     {
         RaycastHit hit;
@@ -118,9 +116,6 @@ public class GrapplingGun : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Call whenever we want to stop a grapple
-    /// </summary>
     void StopGrapple()
     {
         lr.positionCount = 0;

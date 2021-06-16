@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                if (!beetleWalkingAudioSource.isPlaying)
+                if (!beetleWalkingAudioSource.isPlaying && !GameOverScreen.isGameOver)
                 {
                     beetleWalkingAudioSource.clip = beetleWalkingSound;
                     beetleWalkingAudioSource.Play();
@@ -76,7 +76,7 @@ public class EnemyController : MonoBehaviour
 
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 2.2f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 0.81f);
     
     }
 

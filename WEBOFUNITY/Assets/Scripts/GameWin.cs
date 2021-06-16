@@ -11,7 +11,7 @@ public class GameWin : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-
+        Time.timeScale = 1;
         gameObject.SetActive(true);
         isWin = true;
 }

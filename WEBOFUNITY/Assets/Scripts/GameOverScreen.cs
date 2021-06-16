@@ -27,7 +27,14 @@ public class GameOverScreen : MonoBehaviour
         Cursor.visible = true;
     }
 
-    public void Restart()
+
+    public void Update()
+    {
+        Cursor.visible = true;
+    }
+
+
+        public void Restart()
     {
         isGameOver = false;
         Cursor.visible = false;
