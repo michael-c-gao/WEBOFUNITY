@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
 
     float currentAttack = 0f;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
 
@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -44,12 +44,10 @@ public class EnemyAttack : MonoBehaviour
             //movement of the beetle triggered to stop in enemyController through this bool
             attackDelay = Time.time;
             stopMove = true;
-            //attackWindup(attackDelay);
             
-            //print(initiateAttack);
         }
 
-        if ((animationEnd >= ((attackDelay + animationDuration))) && stopMove ) // at animation point where attack makes contact (frame 45-50 beetle)        //notworking
+        if ((animationEnd >= ((attackDelay + animationDuration))) && stopMove ) // at animation point where attack makes contact (frame 45-50 beetle)
         {
             if (inAttackRange)
             {
@@ -116,7 +114,6 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        print("exit attack");
         inAttackRange = false;
     }   
 

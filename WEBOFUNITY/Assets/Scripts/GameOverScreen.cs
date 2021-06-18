@@ -9,14 +9,6 @@ public class GameOverScreen : MonoBehaviour
     public static bool isGameOver = false;
     public Transform teleportTarget;
     public GameObject Player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameObject.SetActive(true);
-        isGameOver = true;
-        Time.timeScale = 0;
-        Cursor.visible = true;
-    }
 
 
     public void Setup()
@@ -34,7 +26,7 @@ public class GameOverScreen : MonoBehaviour
     }
 
 
-        public void Restart()
+    public void Restart()
     {
         isGameOver = false;
         Cursor.visible = false;
@@ -48,7 +40,6 @@ public class GameOverScreen : MonoBehaviour
     {
         isGameOver = false;
         Time.timeScale = 1;
-        gameObject.SetActive(false);
         SceneManager.LoadScene("menu");
     }
 }

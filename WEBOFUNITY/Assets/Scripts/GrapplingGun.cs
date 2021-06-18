@@ -7,7 +7,6 @@ public class GrapplingGun : MonoBehaviour
     public AudioClip spiderWebSlingSound;
     public AudioClip spiderWebReelSound;
     
-    //followed tutorial https://www.youtube.com/watch?v=Xgh4v1w5DxU
     private LineRenderer lr;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrappleable;
@@ -20,6 +19,8 @@ public class GrapplingGun : MonoBehaviour
 
     private Vector3 gunPositionAdjuster = new Vector3(0, 100, 0);
 
+    //reference: https://www.youtube.com/watch?v=Xgh4v1w5DxU
+
     void Awake()
     {
         lr = GetComponent<LineRenderer>();
@@ -29,7 +30,7 @@ public class GrapplingGun : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver && !GameWin.isWin)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)
         {
             //We want the aim cursor to be at the center of the screen
             transform.position = camera.position + gunPositionAdjuster;

@@ -6,7 +6,6 @@ public class StatIncreaserScript : MonoBehaviour
 {
     public string ScaleType = "health";
 
-    // Start is called before the first frame update
     void Start()
     {
         switch (ScaleType)
@@ -29,11 +28,6 @@ public class StatIncreaserScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public string getScaleType()
     {

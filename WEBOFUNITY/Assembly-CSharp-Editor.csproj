@@ -47,7 +47,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Nicrom\PolyPacks\Wind\Assets\Scripts\Editor\LPVegetation_MaterialInspector.cs" />
+     <Compile Include="Assets\GameAssets\Nicrom\PolyPacks\Wind\Assets\Scripts\Editor\LPVegetation_MaterialInspector.cs" />
      <Compile Include="Assets\Editor\GrassPainterEditor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

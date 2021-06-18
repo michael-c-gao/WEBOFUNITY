@@ -9,14 +9,14 @@ public class PlayerAnimationManager : MonoBehaviour
 
     Animator characterAnimator;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         characterAnimator = GetComponent<Animator>();
         spiderAttackingAudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)

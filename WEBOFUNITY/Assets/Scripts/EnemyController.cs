@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-    // Start is called before the first frame update
+    
     // Source of reference: https://youtu.be/xppompv1DBg
     void Start()
     {
@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
         beetleWalkingAudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         target = Player.transform;

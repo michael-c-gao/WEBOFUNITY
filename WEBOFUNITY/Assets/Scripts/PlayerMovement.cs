@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //to implement first person script I followed https://www.youtube.com/watch?v=XAC8U9-dTZU
     //Assingables
     public Transform playerCam;
     public Transform orientation;
@@ -51,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+    //initial reference: https://www.youtube.com/watch?v=XAC8U9-dTZU
+    //although later we changed it to 3rd person
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -85,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver && !GameWin.isWin)
+        if (!PauseMenu.isPaused && !GameOverScreen.isGameOver)
         {
             MyInput();
             if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && grounded)
@@ -106,9 +107,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Find user input. Should put this in its own class but im lazy
-    /// </summary>
     private void MyInput()
     {
         x = Input.GetAxisRaw("Horizontal")*1.25f;

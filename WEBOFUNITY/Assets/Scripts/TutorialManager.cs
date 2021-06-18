@@ -8,8 +8,6 @@ public class TutorialManager : MonoBehaviour
     private int popUpIndex = 0;
     public int x = 0;
 
-
-
     void Update()
     {
         for (int i = 0; i < popUps.Length; i++)
@@ -27,8 +25,6 @@ public class TutorialManager : MonoBehaviour
             }
             
         }
-        
-
         if (popUpIndex>= 0)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -36,12 +32,8 @@ public class TutorialManager : MonoBehaviour
                 popUpIndex++;
             }
         }
-
-        
-
     }
    
-
-        }
+}
 
          

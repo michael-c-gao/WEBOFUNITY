@@ -11,7 +11,7 @@ public class BeetleAnimationManager : MonoBehaviour
 
     Animator beetleAnimator;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         
@@ -19,7 +19,7 @@ public class BeetleAnimationManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         walkTrigger = this.GetComponentInParent<EnemyController>().isChasing;

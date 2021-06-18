@@ -9,25 +9,20 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI HealthText;
 
     public float StartingHealth;
-    public float StartingDamage;
-    public float StartingLifesteal;             //remove
-    public float StartingSpeed;                 //remove
+    public float StartingDamage;  
+    public float StartingSpeed;                
 
     public static float health;
     public float damage;
-    public float lifesteal;
     public float speed;
 
-    // Start is called before the first frame update
     void Start()
     {
         health = StartingHealth;
         damage = StartingDamage;
-        lifesteal = StartingLifesteal;
         speed = StartingSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         HealthText.text = "Health: " + health;
@@ -62,14 +57,7 @@ public class PlayerStats : MonoBehaviour
     {
         return damage;
     }
-    public void setLifesteal(float newLifesteal)
-    {
-        lifesteal = newLifesteal;
-    }
-    public float getLifesteal()
-    {
-        return lifesteal;
-    }
+
     public void setSpeed(float newSpeed)
     {
         speed = newSpeed;

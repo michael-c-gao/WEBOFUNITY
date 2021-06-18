@@ -15,21 +15,11 @@ public class EnemyStats : MonoBehaviour
     public float health;
     public float attack;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
-
         health = StartingHealth;
         attack = StartingAttack;
-
-        //display health as a bar
-
-    }
-
-    // Update is called once per frame
-   
-        
+    }     
 
     //Stat setters and getters
     public void setHealth(float newHealth)
