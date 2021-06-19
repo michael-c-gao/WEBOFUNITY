@@ -1,2 +1,2 @@
 * linguist-vendored
-*.shader linguist-detectable=false
+*.cs linguist-detectable=false
